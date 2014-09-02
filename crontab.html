@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="crontab.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap-multiselect.min.css" type="text/css"/>
+    <link rel="stylesheet" href="stylesheets/crontab.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascripts/bootstrap-multiselect.js"></script>
 </head>
 <body>
 
@@ -238,6 +240,41 @@
   <option value="30">30</option>
   <option value="31">31</option>
 </select> -->
+
+<h3>Hours</h3>
+
+<select class="multiselect hours" multiple="multiple">
+<option value="Midnight">Midnight</option>
+<option value="1AM">1AM</option>
+<option value="2AM">2AM</option>
+<option value="3AM">3AM</option>
+<option value="4AM">4AM</option>
+<option value="5AM">5AM</option>
+<option value="6AM">6AM</option>
+<option value="7AM">7AM</option>
+<option value="8AM">8AM</option>
+<option value="9AM">9AM</option>
+<option value="10AM">10AM</option>
+<option value="11AM">11AM</option>
+<option value="Noon">Noon</option>
+<option value="1PM">1PM</option>
+<option value="2PM">2PM</option>
+<option value="3PM">3PM</option>
+<option value="4PM">4PM</option>
+<option value="5PM">5PM</option>
+<option value="6PM">6PM</option>
+<option value="7PM">7PM</option>
+<option value="8PM">8PM</option>
+<option value="9PM">9PM</option>
+<option value="10PM">10PM</option>
+<option value="11PM">11PM</option>
+</select>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.multiselect').multiselect();
+});
+</script>
 
 </body>
 </html>
