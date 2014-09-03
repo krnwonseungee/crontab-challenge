@@ -17,19 +17,14 @@ Controller.prototype = {
         })
     },
 
-    cronVars: { 'months': [], 'days-wk': [] },
+    cronVars: { 'months': [], 'days-wk': [], 'days-month': [], 'hours': [], 'minutes': [] },
 
     createCronVarArr: function(){
         var cronVars = this.cronVars
-        var cronVarArr = [ cronVars['months'], cronVars['days-wk'] ]
+        var cronVarArr = [ cronVars['months'], cronVars['days-wk'], cronVars['days-month'], cronVars['hours'], cronVars['minutes'] ]
         var cronStr = ""
         for (var i=0; i < cronVarArr.length; i++){
-            if(cronVarArr[i].length == 0) {
-                cronVarArr[i] = "*"
-            }
-            else {
-                cronVarArr[i] = cronVarArr[i].toString();
-            }
+            (cronVarArr[i].length == 0) ? (cronVarArr[i] = "*") : (cronVarArr[i] = cronVarArr[i].toString())
             cronStr += cronVarArr[i] + " "
         }
         return cronStr;
