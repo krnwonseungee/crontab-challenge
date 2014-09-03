@@ -15,13 +15,20 @@ Controller.prototype = {
                 controller.recordMonth(chosenMonthBtn);
             }, 50)
         })
+
+        $('.days-wk label').mouseup(function(){
+            var chosenDayOfWkBtn = this;
+            setTimeout(function(){
+                controller.recordDayOfWeek(chosenDayOfWkBtn);
+            }, 50)
+        })
     },
 
-    cronVars: { chosenMonths: [] },
+    cronVars: { chosenMonths: [], chosenDayOfWeek: [] },
 
     createCronVarArr: function(){
         var cronVars = this.cronVars
-        return [ cronVars.chosenMonths ]
+        return [ cronVars.chosenMonths, cronVars.chosenDayOfWeek ]
     },
 
     recordMonth: function(chosenMonthBtn){
@@ -34,6 +41,20 @@ Controller.prototype = {
         }
         else {
             chosenMonths.splice(chosenMonths.indexOf(inputVal), 1)
+        }
+        view.renderCronString(this.createCronVarArr())
+    },
+
+    recordDayOfWeek: function(chosenDayOfWkBtn){
+        var input = $(chosenDayOfWkBtn).find('input')
+        var inputVal = $(input).attr('value')
+        var chosenDayOfWeek = this.cronVars.chosenDayOfWeek
+
+        if ($(chosenDayOfWkBtn).hasClass('active')) {
+            chosenDayOfWeek.push(inputVal)
+        }
+        else {
+            chosenDayOfWeek.splice(chosenDayOfWeek.indexOf(inputVal), 1)
         }
         view.renderCronString(this.createCronVarArr())
     }
