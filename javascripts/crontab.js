@@ -9,65 +9,45 @@ Controller.prototype = {
 
     bindEvents: function(){
         var chosenMonths = [];
-        $('.months label').mouseup(function(){
-            var chosenMonthBtn = this;
+        $('label').mouseup(function(){
+            var chosenBtn = this;
             setTimeout(function(){
-                controller.recordMonth(chosenMonthBtn);
-            }, 50)
-        })
-
-        $('.days-wk label').mouseup(function(){
-            var chosenDayOfWkBtn = this;
-            setTimeout(function(){
-                controller.recordDayOfWeek(chosenDayOfWkBtn);
+                controller.recordChange(chosenBtn);
             }, 50)
         })
     },
 
-    cronVars: { chosenMonths: [], chosenDayOfWeek: [] },
+    cronVars: { 'months': [], 'days-wk': [] },
 
     createCronVarArr: function(){
         var cronVars = this.cronVars
-        var cronVarArr = [ cronVars.chosenMonths, cronVars.chosenDayOfWeek ]
+        var cronVarArr = [ cronVars['months'], cronVars['days-wk'] ]
+        var cronStr = ""
         for (var i=0; i < cronVarArr.length; i++){
-            // debugger
             if(cronVarArr[i].length == 0) {
                 cronVarArr[i] = "*"
             }
             else {
                 cronVarArr[i] = cronVarArr[i].toString();
             }
+            cronStr += cronVarArr[i] + " "
         }
-        return cronVarArr;
+        return cronStr;
     },
 
-    recordMonth: function(chosenMonthBtn){
-        var input = $(chosenMonthBtn).find('input')
-        var inputVal = $(input).attr('value')
-        var chosenMonths = this.cronVars.chosenMonths
+    recordChange: function(chosenBtn){
+        var inputVal = $(chosenBtn.children[0]).attr('value')
+        var changedCategory = this.cronVars[ chosenBtn.parentElement.classList[1] ]
 
-        if ($(chosenMonthBtn).hasClass('active')) {
-            chosenMonths.push(inputVal)
+        if ($(chosenBtn).hasClass('active')) {
+            changedCategory.push(inputVal)
         }
         else {
-            chosenMonths.splice(chosenMonths.indexOf(inputVal), 1)
+            changedCategory.splice(changedCategory.indexOf(inputVal), 1)
         }
         view.renderCronString(this.createCronVarArr())
     },
 
-    recordDayOfWeek: function(chosenDayOfWkBtn){
-        var input = $(chosenDayOfWkBtn).find('input')
-        var inputVal = $(input).attr('value')
-        var chosenDayOfWeek = this.cronVars.chosenDayOfWeek
-
-        if ($(chosenDayOfWkBtn).hasClass('active')) {
-            chosenDayOfWeek.push(inputVal)
-        }
-        else {
-            chosenDayOfWeek.splice(chosenDayOfWeek.indexOf(inputVal), 1)
-        }
-        view.renderCronString(this.createCronVarArr())
-    }
 
 }
 
