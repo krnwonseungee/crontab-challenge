@@ -12,81 +12,106 @@
 </head>
 <body>
 
-<h3>Months</h3>
-<div class="btn-toolbar" role="toolbar">
-<div class="btn-group months" data-toggle="buttons">
-    <label class="btn btn-primary">
-        <input type="checkbox" value="January">January
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="February">February
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="March">March
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="April">April
-    </label>
-</div>
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            Months
+            </a>
+          </h4>
+        </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+          <div class="panel-body">
+                <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group months" data-toggle="buttons">
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="January">January
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="February">February
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="March">March
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="April">April
+                    </label>
+                </div>
+                </div>
+
+                <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group months" data-toggle="buttons">
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="May">May
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="June">June
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="July">July
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="August">August
+                    </label>
+                </div>
+                </div>
+
+                <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group months" data-toggle="buttons">
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="September">September
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="October">October
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="November">November
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="December">December
+                    </label>
+                </div>
+                </div>
+          </div>
+    </div>
 </div>
 
-<div class="btn-toolbar" role="toolbar">
-<div class="btn-group months" data-toggle="buttons">
-    <label class="btn btn-primary">
-        <input type="checkbox" value="May">May
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="June">June
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="July">July
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="August">August
-    </label>
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Days of Week
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="btn-group days-wk" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="checkbox" value="Sun">Sun
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="Mon">Mon
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="Tues">Tues
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="Wed">Wed
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="Thurs">Thurs
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="Fri">Fri
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="Sat">Sat
+            </label>
+        </div>
+  </div>
 </div>
-</div>
-
-<div class="btn-toolbar" role="toolbar">
-<div class="btn-group months" data-toggle="buttons">
-    <label class="btn btn-primary">
-        <input type="checkbox" value="September">September
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="October">October
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="November">November
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="December">December
-    </label>
-</div>
-</div>
-
-<h3>Days of Week</h3>
-<div class="btn-group days-wk" data-toggle="buttons">
-    <label class="btn btn-primary">
-        <input type="checkbox" value="Sun">Sun
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="Mon">Mon
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="Tues">Tues
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="Wed">Wed
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="Thurs">Thurs
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="Fri">Fri
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value="Sat">Sat
-    </label>
 </div>
 
 
