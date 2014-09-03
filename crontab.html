@@ -3,12 +3,10 @@
     <title>Cron Expression Widget</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheets/bootstrap-multiselect.min.css" type="text/css"/>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/crontab.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="javascripts/bootstrap-multiselect.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -352,52 +350,65 @@
 </div>
 </div>
 
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+          Minutes
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group days-month" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="checkbox" value=":00">:00
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value=":05">:05
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value=":10">:10
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value=":15">:15
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value=":20">:20
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value=":25">:25
+            </label>
+        </div>
+        </div>
 
-<h3>Minutes</h3>
-<div class="btn-toolbar" role="toolbar">
-<div class="btn-group days-month" data-toggle="buttons">
-    <label class="btn btn-primary">
-        <input type="checkbox" value=":00">:00
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value=":05">:05
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value=":10">:10
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value=":15">:15
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value=":20">:20
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value=":25">:25
-    </label>
-</div>
-</div>
+        <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group days-month" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="checkbox" value=":30">:30
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value=":35">:35
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value=":40">:40
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value=":45">:45
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value=":50">:50
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value=":55">:55
+            </label>
+        </div>
+        </div>
 
-<div class="btn-toolbar" role="toolbar">
-<div class="btn-group days-month" data-toggle="buttons">
-    <label class="btn btn-primary">
-        <input type="checkbox" value=":30">:30
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value=":35">:35
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value=":40">:40
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value=":45">:45
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value=":50">:50
-    </label>
-    <label class="btn btn-primary">
-        <input type="checkbox" value=":55">:55
-    </label>
-</div>
+              </div>
+    </div>
+  </div>
 </div>
 
 </body>
