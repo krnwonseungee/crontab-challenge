@@ -21,10 +21,10 @@ Controller.prototype = {
 
     createCronVarArr: function(){
         var cronVars = this.cronVars
-        var cronVarArr = [ cronVars['months'], cronVars['days-wk'], cronVars['days-month'], cronVars['hours'], cronVars['minutes'] ]
+        var cronVarArr = [ cronVars['minutes'], cronVars['hours'], cronVars['days-month'], cronVars['months'], cronVars['days-wk'] ]
         var cronStr = ""
         for (var i=0; i < cronVarArr.length; i++){
-            (cronVarArr[i].length == 0) ? (cronVarArr[i] = "*") : (cronVarArr[i] = cronVarArr[i].toString())
+            (cronVarArr[i].length == 0) ? (cronVarArr[i] = "*") : (cronVarArr[i] = cronVarArr[i].sort(function(a,b) { return a - b; }).toString())
             cronStr += cronVarArr[i] + " "
         }
         return cronStr;
