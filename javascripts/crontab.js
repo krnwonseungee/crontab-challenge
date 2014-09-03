@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    var selectedMonths = [];
     controller.bindEvents();
 })
 
@@ -8,7 +7,8 @@ View = function(){};
 
 Controller.prototype = {
 
-    bindEvents: function bindEvents(){
+    bindEvents: function(){
+        var chosenMonths = [];
         $('.months label').mouseup(function(){
             var chosenMonthBtn = this;
             setTimeout(function(){
@@ -17,19 +17,29 @@ Controller.prototype = {
         })
     },
 
+    cronVars: { chosenMonths: [] },
+
     recordMonth: function(chosenMonthBtn){
+        var input = $(chosenMonthBtn).find('input')
+        var inputVal = $(input).attr('value')
+        var chosenMonths = this.cronVars.chosenMonths
+
         if ($(chosenMonthBtn).hasClass('active')) {
-            var input = $(chosenMonthBtn).find('input')
-            var inputVal = $(input).attr('value')
-            console.log(inputVal)
+            chosenMonths.push(inputVal)
         }
         else {
-            console.log('poo')
+            chosenMonths.splice(chosenMonths.indexOf(inputVal), 1)
         }
+        console.log(chosenMonths)
     }
 
 }
 
+View.prototype = {
+    renderCronString: function(){
+        $('#cronstring').innerHTML('')
+    }
+}
 
 controller = new Controller();
 view = new View();
