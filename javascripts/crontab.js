@@ -19,6 +19,11 @@ Controller.prototype = {
 
     cronVars: { chosenMonths: [] },
 
+    createCronVarArr: function(){
+        var cronVars = this.cronVars
+        return [ cronVars.chosenMonths ]
+    },
+
     recordMonth: function(chosenMonthBtn){
         var input = $(chosenMonthBtn).find('input')
         var inputVal = $(input).attr('value')
@@ -30,14 +35,15 @@ Controller.prototype = {
         else {
             chosenMonths.splice(chosenMonths.indexOf(inputVal), 1)
         }
-        console.log(chosenMonths)
+        view.renderCronString(this.createCronVarArr())
     }
 
 }
 
 View.prototype = {
-    renderCronString: function(){
-        $('#cronstring').innerHTML('')
+    renderCronString: function(cronVarArr){
+        cronstringSpan = $('#cronstring')[0]
+        cronstringSpan.innerHTML = cronVarArr.toString()
     }
 }
 
