@@ -1,3 +1,7 @@
+.widget {
+  width: 50%;
+}
+
 .months label.btn.btn-primary {
   width: 100px;
 }
@@ -11,3 +15,4 @@ select[name="days-month"]{
   height: 200px;
   width: 30px;
 }
+
