@@ -28,7 +28,17 @@ Controller.prototype = {
 
     createCronVarArr: function(){
         var cronVars = this.cronVars
-        return [ cronVars.chosenMonths, cronVars.chosenDayOfWeek ]
+        var cronVarArr = [ cronVars.chosenMonths, cronVars.chosenDayOfWeek ]
+        for (var i=0; i < cronVarArr.length; i++){
+            // debugger
+            if(cronVarArr[i].length == 0) {
+                cronVarArr[i] = "*"
+            }
+            else {
+                cronVarArr[i] = cronVarArr[i].toString();
+            }
+        }
+        return cronVarArr;
     },
 
     recordMonth: function(chosenMonthBtn){
