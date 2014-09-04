@@ -1,0 +1,132 @@
+.widget {
+  width: 35%;
+  position: relative;
+  top: 20px;
+  left: 30%;
+}
+
+.panel-default > .panel-heading {
+  background-color: #70ADD8;
+  color: #3F3D3D;
+}
+
+.every {
+  /*float: right;
+  position: absolute;
+  right: 7px;*/
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.every:hover {
+  text-decoration: none;
+}
+
+.months label.btn.btn-primary {
+  width: 100px;
+}
+
+.days-month label.btn.btn-primary {
+  width: 40px;
+  /*border-radius: 0px;*/
+}
+
+.hours label.btn.btn-primary {
+  /*width: 80px;*/
+  /*border-radius: 0px;*/
+}
+
+.output {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: table;
+  position: relative;
+  left: 20%;
+}
+
+.input-group input {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  width: 250px;
+  padding-left: 6px;
+}
+
+.input-group i {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  color: #9B9999;
+}
+
+.all-intervals {
+  display: none;
+}
+
+.all-intervals label {
+  width: 40px;
+}
+
+#midnight {
+  font-size: 11.4px;
+  height: 34px;
+  padding-top: 9px;
+}
+
+#noon {
+  width: 71px;
+}
+
+#zeroclipboard {
+  height: 10px;
+  width: 25px;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  border: 1px solid #ddd;
+  display: table-cell;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  cursor: pointer;
+}
+
+#hint {
+  font-size: 10px;
+  font-style: italic;
+}
+
+#show-copied {
+  position: absolute;
+  width: 45px;
+  height: 28px;
+  text-align: center;
+  line-height: 26px;
+  background-color: #428bca;
+  border: 1px solid #428bca;
+  /*-webkit-border-radius: 30px;*/
+  /*-moz-border-radius: 30px;*/
+  border-radius: 10px;
+  /*-webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;*/
+  /*box-shadow: 2px 2px 4px #888;*/
+  bottom: 1px;
+  font-size: 10px;
+  right: -52px;
+  color: #EDEEEF;
+  display:none;
+}
+
+#show-copied:before
+{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0px;
+  top: 18px;
+  border: 6px solid;
+  border-color: #428bca transparent transparent #428bca;
+}

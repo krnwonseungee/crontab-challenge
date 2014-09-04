@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<head>
+    <title>Cron Expression Widget</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/crontab.css">
+</head>
+<body>
+
+
+<div class="widget">
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            Months
+            </a>
+            <span class="every"><input type="checkbox"> Monthly</span>
+          </h4>
+        </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+          <div class="panel-body">
+                <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group months" data-toggle="buttons">
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="0">Jan
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="1">Feb
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="2">Mar
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="3">Apr
+                    </label>
+                </div>
+                </div>
+
+                <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group months" data-toggle="buttons">
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="4">May
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="5">Jun
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="6">Jul
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="7">Aug
+                    </label>
+                </div>
+                </div>
+
+                <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group months" data-toggle="buttons">
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="8">Sep
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="9">Oct
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="10">Nov
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" value="11">Dec
+                    </label>
+                </div>
+                </div>
+          </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Days of Week
+        </a>
+        <span class="every"><input type="checkbox"> Daily</span>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="btn-group days-wk" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="checkbox" value="0">Su
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="1">M
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="2">Tu
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="3">W
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="4">Th
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="5">F
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="6">Sa
+            </label>
+        </div>
+  </div>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          Days of Month
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group days-month" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="checkbox" value="1">1
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="2">2
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="3">3
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="4">4
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="5">5
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="6">6
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="7">7
+            </label>
+        </div>
+        </div>
+
+        <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group days-month" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="checkbox" value="8">8
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="9">9
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="10">10
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="11">11
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="12">12
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="13">13
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="14">14
+            </label>
+        </div>
+        </div>
+
+        <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group days-month" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="checkbox" value="15">15
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="16">16
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="17">17
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="18">18
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="19">19
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="20">20
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="21">21
+            </label>
+        </div>
+        </div>
+
+        <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group days-month" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="checkbox" value="22">22
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="23">23
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="24">24
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="25">25
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="26">26
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="27">27
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="28">28
+            </label>
+        </div>
+        </div>
+        <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group days-month" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="checkbox" value="29">29
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="30">30
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="31">31
+            </label>
+        </div>
+        </div>
+
+</div>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+          Hours
+        </a>
+        <span class="every"><input type="checkbox"> Hourly</span>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+        <h5>Morning (AM)</h5>
+        <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group hours" data-toggle="buttons">
+            <label class="btn btn-primary" id="midnight">
+                <input type="checkbox" value="0">Midnight
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="1">1AM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="2">2AM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="3">3AM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="4">4AM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="5">5AM
+            </label>
+        </div>
+        </div>
+        <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group hours" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="checkbox" value="6">6AM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="7">7AM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="8">8AM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="9">9AM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="10">10AM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="11">11AM
+            </label>
+        </div>
+        </div>
+
+        <h5>Evening (PM)</h5>
+        <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group hours" data-toggle="buttons">
+            <label class="btn btn-primary" id="noon">
+                <input type="checkbox" value="12">Noon
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="13">1PM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="14">2PM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="15">3PM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="16">4PM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="17">5PM
+            </label>
+        </div>
+        </div>
+        <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group hours" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="checkbox" value="18">6PM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="19">7PM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="20">8PM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="21">9PM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="22">10PM
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" value="23">11PM
+            </label>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+          Minutes
+        </a>
+        <span class="every"><input type="checkbox"> Every minute</span>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="every-five">
+            <!-- <a href="#" class="show-all-intervals">Show every minute?</a> -->
+            <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group minutes" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="0">:00
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="5">:05
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="10">:10
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="15">:15
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="20">:20
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="25">:25
+                </label>
+            </div>
+            </div>
+
+            <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group minutes" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="30">:30
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="35">:35
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="40">:40
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="45">:45
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="50">:50
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="55">:55
+                </label>
+            </div>
+          </div>
+        </div>
+
+<!--         <div class="all-intervals">
+            <a href="#" class="show-every-five">Show every 5 minutes again?</a>
+            <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group minutes" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="0">:00
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="1">:01
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="2">:02
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="3">:03
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="4">:04
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="5">:05
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="6">:06
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="7">:07
+                </label>
+                                <label class="btn btn-primary">
+                    <input type="checkbox" value="8">:08
+                </label>
+                                <label class="btn btn-primary">
+                    <input type="checkbox" value="9">:09
+                </label>
+            </div>
+            </div>
+
+            <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group minutes" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="10">:10
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="11">:11
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="12">:12
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="13">:13
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="14">:14
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="15">:15
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="16">:16
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="17">:17
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="18">:18
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="19">:19
+                </label>
+            </div>
+          </div>
+
+            <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group minutes" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="20">:20
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="21">:21
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="22">:22
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="23">:23
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="24">:24
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="25">:25
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="26">:26
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="27">:27
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="28">:28
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="29">:29
+                </label>
+            </div>
+          </div>
+
+            <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group minutes" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="30">:30
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="31">:31
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="32">:32
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="33">:33
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="34">:34
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="35">:35
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="36">:36
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="37">:37
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="38">:38
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="39">:39
+                </label>
+            </div>
+          </div>
+
+            <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group minutes" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="40">:40
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="41">:41
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="42">:42
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="43">:43
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="44">:44
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="45">:45
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="46">:46
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="47">:47
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="48">:48
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="49">:49
+                </label>
+            </div>
+          </div>
+
+            <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group minutes" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="50">:50
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="51">:51
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="52">:52
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="53">:53
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="54">:54
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="55">:55
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="56">:56
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="57">:57
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="58">:58
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="59">:59
+                </label>
+            </div>
+          </div> -->
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+          Seconds
+        </a>
+        <span class="every"><input type="checkbox"> Every second</span>
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse">
+      <div class="panel-body">
+
+        <div class="every-five">
+            <!-- <a href="#" class="show-all-intervals">Show every minute?</a> -->
+            <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group seconds" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="0">:00
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="5">:05
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="10">:10
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="15">:15
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="20">:20
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="25">:25
+                </label>
+            </div>
+            </div>
+
+            <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group seconds" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="30">:30
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="35">:35
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="40">:40
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="45">:45
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="50">:50
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" value="55">:55
+                </label>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="output">
+    <h5>Your cronstring:</h5>
+    <div class="input-group">
+        <input type="text" name="cronstr" value="* * * * * *">
+        <span id="zeroclipboard"><i class="fa fa-files-o"></i></span>
+        <p id="show-copied">Copied!</span>
+    </div>
+    <p id="hint">Click the button on the right to copy your cron string.</p>
+</div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ZeroClipboard.js"></script>
+    <script src="js/cronZeroClipboard.js"></script>
+    <script src="js/crontab.js"></script>
+
+</body>
+</html>
