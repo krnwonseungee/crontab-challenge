@@ -11,7 +11,6 @@
 }
 
 .every {
-  /*float: right;
   position: absolute;
   right: 7px;*/
   font-size: 12px;
@@ -110,12 +109,8 @@
   line-height: 26px;
   background-color: #428bca;
   border: 1px solid #428bca;
-  /*-webkit-border-radius: 30px;*/
-  /*-moz-border-radius: 30px;*/
   border-radius: 10px;
-  /*-webkit-box-shadow: 2px 2px 4px #888;
   -moz-box-shadow: 2px 2px 4px #888;*/
-  /*box-shadow: 2px 2px 4px #888;*/
   bottom: 1px;
   font-size: 10px;
   right: -52px;
@@ -123,8 +118,7 @@
   display:none;
 }
 
-#show-copied:before
-{
+#show-copied:before {
   content: ' ';
   position: absolute;
   width: 0;
