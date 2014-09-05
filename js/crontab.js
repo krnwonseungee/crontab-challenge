@@ -81,8 +81,7 @@ Controller.prototype = {
             changedCategory.splice(changedCategory.indexOf(inputVal), 1)
         }
         view.renderCronString(this.createCronVarArr())
-    },
-
+    }
 
 }
 
