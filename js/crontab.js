@@ -22,9 +22,7 @@ Controller.prototype = {
     },
 
     bindCheckboxes: function(){
-        $('.daily1 input').click(function(){
-            $('.daily2 input').click()
-        })
+        controller.linkDailyCheckboxes();
 
         $('input[type="checkbox"]').click(function(){
             var checkbox = this;
@@ -33,6 +31,12 @@ Controller.prototype = {
             controller.updateWidgetAfterCheckboxChange(checkbox, parentDiv, changedCategory);
 
             view.renderCronString(controller.createCronVarArr())
+        })
+    },
+
+    linkDailyCheckboxes: function(){
+        $('.daily1 input').click(function(){
+            $('.daily2 input').click()
         })
     },
 
@@ -66,8 +70,6 @@ Controller.prototype = {
     recordClickedButtonChange: function(chosenBtn){
         var inputVal = $(chosenBtn.children[0]).attr('value')
         var changedCategory = this.cronVars[ chosenBtn.parentElement.classList[1] ]
-        // $('#show-copied').css("display", "block").delay(1500).fadeOut(500)
-
 
         if ($(chosenBtn).hasClass('active')) {
             if (changedCategory.indexOf('*') != -1){

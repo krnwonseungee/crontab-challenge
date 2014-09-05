@@ -22,6 +22,10 @@
   text-decoration: none;
 }
 
+.daily2 {
+  display: none;
+}
+
 .months label.btn.btn-primary {
   width: 100px;
 }
