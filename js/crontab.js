@@ -25,13 +25,17 @@ Controller.prototype = {
         $('input[type="checkbox"]').click(function(){
             var checkbox = this;
             var parentDiv = $(this).parents()[3]
-            var allLabelsArr = $(parentDiv).find('.btn-primary')
             var changedCategory = $(parentDiv).find('.btn-group')[0].classList[1]
+            updateWidgetAfterCheckboxChange(checkbox);
 
-            controller.clickAllOrNoButtons(checkbox, allLabelsArr);
-            controller.cronVars[changedCategory] = ['*']
             view.renderCronString(controller.createCronVarArr())
         })
+    },
+
+    updateWidgetAfterCheckboxChange: function(checkbox){
+            var allLabelsArr = $(parentDiv).find('.btn-primary')
+            controller.clickAllOrNoButtons(checkbox, allLabelsArr);
+            controller.cronVars[changedCategory] = ['*']
     },
 
     clickAllOrNoButtons: function(checkbox, allLabelsArr){
