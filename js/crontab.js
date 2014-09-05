@@ -22,17 +22,21 @@ Controller.prototype = {
     },
 
     bindCheckboxes: function(){
+        $('.daily1 input').click(function(){
+            $('.daily2 input').click()
+        })
+
         $('input[type="checkbox"]').click(function(){
             var checkbox = this;
             var parentDiv = $(this).parents()[3]
             var changedCategory = $(parentDiv).find('.btn-group')[0].classList[1]
-            controller.updateWidgetAfterCheckboxChange(checkbox);
+            controller.updateWidgetAfterCheckboxChange(checkbox, parentDiv, changedCategory);
 
             view.renderCronString(controller.createCronVarArr())
         })
     },
 
-    updateWidgetAfterCheckboxChange: function(checkbox){
+    updateWidgetAfterCheckboxChange: function(checkbox, parentDiv, changedCategory){
             var allLabelsArr = $(parentDiv).find('.btn-primary')
             controller.clickAllOrNoButtons(checkbox, allLabelsArr);
             controller.cronVars[changedCategory] = ['*']
