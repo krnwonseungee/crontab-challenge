@@ -26,7 +26,7 @@ Controller.prototype = {
             var checkbox = this;
             var parentDiv = $(this).parents()[3]
             var changedCategory = $(parentDiv).find('.btn-group')[0].classList[1]
-            updateWidgetAfterCheckboxChange(checkbox);
+            controller.updateWidgetAfterCheckboxChange(checkbox);
 
             view.renderCronString(controller.createCronVarArr())
         })
