@@ -23,6 +23,14 @@
   display: none;
 }
 
+.btn.btn-primary {
+}
+
+.btn.btn-primary:hover {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
 .months label.btn.btn-primary {
   width: 100px;
 }
