@@ -10,13 +10,20 @@
   color: #3F3D3D;
 }
 
+.panel-heading {
+  background-color: #70ADD8;
+  color: #3F3D3D;
+  text-decoration: none;
+}
+
+.panel a:hover {
+  text-decoration: none;
+  color: #3F3D3D;
+}
+
 .every {
   font-size: 12px;
   margin-left: 10px;
-}
-
-.every:hover {
-  text-decoration: none;
 }
 
 .daily2 {
