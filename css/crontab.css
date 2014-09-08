@@ -5,6 +5,10 @@
   left: 30%;
 }
 
+.panel {
+  width: 85%;
+}
+
 .panel-default > .panel-heading {
   background-color: #70ADD8;
   color: #3F3D3D;
@@ -24,6 +28,11 @@
 .every {
   font-size: 12px;
   margin-left: 10px;
+  float: right;
+  position:relative;
+  bottom: 28px;
+  right: 15px;
+  font-weight: bold;
 }
 
 .daily2 {
@@ -39,7 +48,7 @@
 }
 
 .months label.btn.btn-primary {
-  width: 100px;
+  width: 70px;
 }
 
 .days-month label.btn.btn-primary {
