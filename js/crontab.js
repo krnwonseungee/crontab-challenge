@@ -43,7 +43,8 @@ Controller.prototype = {
     updateWidgetAfterCheckboxChange: function(checkbox, parentDiv, changedCategory){
             var allLabelsArr = $(parentDiv).find('.btn-primary')
             controller.clickAllOrNoButtons(checkbox, allLabelsArr);
-            controller.cronVars[changedCategory] = ['*']
+            checkbox.checked == true ? controller.cronVars[changedCategory] = ['*'] : controller.cronVars[changedCategory] = ['?']
+            // controller.cronVars[changedCategory] = ['*']
     },
 
     clickAllOrNoButtons: function(checkbox, allLabelsArr){
