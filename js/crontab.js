@@ -25,8 +25,9 @@ Controller.prototype = {
         controller.linkDailyCheckboxes();
 
         $('input[type="checkbox"]').click(function(){
+            // debugger
             var checkbox = this;
-            var parentDiv = $(this).parents()[3]
+            var parentDiv = $(this).parents()[1]
             var changedCategory = $(parentDiv).find('.btn-group')[0].classList[1]
             controller.updateWidgetAfterCheckboxChange(checkbox, parentDiv, changedCategory);
 
@@ -41,6 +42,7 @@ Controller.prototype = {
     },
 
     updateWidgetAfterCheckboxChange: function(checkbox, parentDiv, changedCategory){
+            // debugger
             var allLabelsArr = $(parentDiv).find('.btn-primary')
             controller.clickAllOrNoButtons(checkbox, allLabelsArr);
             checkbox.checked == true ? controller.cronVars[changedCategory] = ['*'] : controller.cronVars[changedCategory] = ['?']
@@ -48,6 +50,7 @@ Controller.prototype = {
     },
 
     clickAllOrNoButtons: function(checkbox, allLabelsArr){
+        console.log(allLabelsArr.length)
         for (var i=0; i < allLabelsArr.length; i++){
             if ( (allLabelsArr[i].classList.length == 2) == checkbox.checked ){
                 allLabelsArr[i].click();
@@ -59,10 +62,11 @@ Controller.prototype = {
 
     createCronVarArr: function(){
         var cronVars = this.cronVars
+        console.log(cronVars)
         var cronVarArr = [ cronVars['seconds'], cronVars['minutes'], cronVars['hours'], cronVars['days-month'], cronVars['months'], cronVars['days-wk'] ]
         var cronStr = ""
         for (var i=0; i < cronVarArr.length; i++){
-            (cronVarArr[i].length == 0) ? (cronVarArr[i] = "*") : (cronVarArr[i] = cronVarArr[i].sort(function(a,b) { return a - b; }).toString())
+            (cronVarArr[i].length == 0) ? (cronVarArr[i] = "?") : (cronVarArr[i] = cronVarArr[i].sort(function(a,b) { return a - b; }).toString())
             cronStr += cronVarArr[i] + " "
         }
         return cronStr;
