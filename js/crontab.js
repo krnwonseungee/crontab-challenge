@@ -25,7 +25,6 @@ Controller.prototype = {
         controller.linkDailyCheckboxes();
 
         $('input[type="checkbox"]').click(function(){
-            // debugger
             var checkbox = this;
             var parentDiv = $(this).parents()[1]
             var changedCategory = $(parentDiv).find('.btn-group')[0].classList[1]
@@ -42,7 +41,6 @@ Controller.prototype = {
     },
 
     updateWidgetAfterCheckboxChange: function(checkbox, parentDiv, changedCategory){
-            // debugger
             var allLabelsArr = $(parentDiv).find('.btn-primary')
             controller.clickAllOrNoButtons(checkbox, allLabelsArr);
             checkbox.checked == true ? controller.cronVars[changedCategory] = ['*'] : controller.cronVars[changedCategory] = ['?']
